@@ -1,0 +1,154 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+/* CSS Document */
+
+
+body{
+	background-color:#333;
+}
+
+
+h1, h2 { margin:0px; }
+
+
+li { font: 12px/16px Arial, Helvetica, sans-serif; }
+
+
+
+h1 { 
+	 color:#999;
+	 font: 24px/30px Arial, Helvetica, sans-serif;
+}
+
+.Section h2 {
+	color:#fff;
+	background-color:#000;	
+	font: 12px/16px Arial, Helvetica, sans-serif;
+	border-radius:10px;
+	padding: 13px 0px 14px 10px;
+}
+
+h2.key{
+	text-align:right;
+	color:#444;
+	background-color:transparent;
+	font: bold 32px/16px Arial, Helvetica, sans-serif;	
+}
+
+.ornament {
+	height:75px;	
+	background:url(images/pointer2.png) no-repeat 0% 100%;
+}
+
+.shortDescription{
+	color:#444;
+	font: bold 28px/32px Arial, Helvetica, sans-serif;
+	position:absolute;
+	top:120px;
+	left:470px;
+}
+
+#example{
+	font: bold 18px/28px Arial, Helvetica, sans-serif;
+
+}
+#click{
+	color:#666;
+	font: bold 18px/28px Arial, Helvetica, sans-serif;
+}
+
+div.year {
+	font-size:10px;
+	float:left;
+}
+
+div.year div {
+	margin-left:3px;
+	margin-bottom:3px;
+	background-color:#000;
+	border-radius:5px;
+	font: 11px/11px Arial, Helvetica, sans-serif;
+	color:#fff;	
+	padding: 5px 5px 5px 5px;
+}
+
+div.year h1 {
+	margin: 0px 0px 0px 10px;
+}
+
+div.year h2,div.year h3,div.year p ,div.year a{
+	font-size:11px;
+	margin: 2px 0px 2px 5px;
+	padding: 0px 0px 0px 0px;	
+}
+
+div.year h2, div.year h3 {
+	font: bold .9em/.9em Arial, Helvetica, sans-serif;
+}
+
+div.year p {
+	display:none;
+}
+
+div.year div a{
+	color:#fff;
+}
+
+div.year div a:hover{
+	color:#fff;
+}
+
+/* unordered listes used as keys*/
+
+div#key_languageSkills ul, div#work_key ul {
+	list-style-type:none;
+	background-color:#ff0;
+	border-radius:10px;	
+	padding:0px;
+	margin:0px;	 
+}
+
+div#key_languageSkills li, div#work_key li {
+	height:55px;
+	padding:0px 0px 0px 55px;
+	margin:0px 0px 10px 0px;
+}
+
+li#gd { background:url(images/pointer.png) no-repeat 4px 5px; }
+li#dev { background: url(images/pointer.png) no-repeat 4px 5px; }
+li#mg { background:url(images/pointer.png) no-repeat 0px 5px; }
+
+/* Tooltip */
+
+div#tooltipBG {
+	padding:20px;
+	background-color:#000;
+	border-radius:10px;
+}
+
+div#tooltipBG h2, div#tooltipBG h3 , div#tooltipBG p, div#tooltipBG a  {
+	margin:0px;
+}
+
+div#tooltipBG h2 {
+	/*bold italic small-caps 1em/1.5em arial,sans-serif*/
+	font:italic .8em/1.5em verdana,sans-serif;			
+	color:#fff;
+}
+ 
+div#tooltipBG h3 {			
+	font: .7em/1em verdana,sans-serif;				
+	color:#666;
+}
+
+div#tooltipBG p {
+	font: 2.7em/1.2em verdana,sans-serif;	
+	padding: 5px 0px 5px 0px;							
+	color:#fff;
+}
+ 	
+div#tooltipBG a {						
+	color:#f0f;
+}

@@ -1,0 +1,393 @@
+<!DOCTYPE html >
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title> RENDRERING DATA TO THE CANVAS </title>
+        <script type="application/javascript" src="frameworks/greensock/uncompressed/TweenMax.js"></script>
+		<script type="application/javascript" src="frameworks/mootools-core-1.4.1-full-compat.js"></script>
+		<script type="application/javascript" src="frameworks/mootools-more-1.4.0.1.js"></script>
+		<script type="application/javascript" src="custom_js/CanvasTools.js"></script>
+		<script type="application/javascript" src="custom_js/Additional.js"></script>
+		<script type="application/javascript" src="custom_js/DataParsing.js"></script>
+		<script type="application/javascript" src="custom_js/CompositePattern.js"></script>        	
+		<script type="application/javascript" src="custom_js/Renderers.js"></script> 
+        <script type="application/javascript" src="custom_js/Builders.js"></script>        
+		<script type="application/javascript" src="custom_js/dev.js"></script>		
+		
+		<link rel="stylesheet" href="main.css" />
+	</head> 
+	
+	<body>
+
+        
+	    <div id='PageContent'>
+		    
+		    <div class='Section long ' id='work_data' style='float:left'>
+			    <div class='ornament'>
+			    	<h2> DATA VISUALIZATION EXPERIMENT <br/> Click on the Radial Graph for More Info </h2>
+			    </div>
+             	<button type="button" onclick="buttonTest()">Animate (Beta)</button>
+			    <div class='shortDescription'>
+			    	<p>  Dates are collected from html and communicated
+                    <br/> as a section of a circle circumference.
+                    <br/> Each full circle represents a full year. 
+                    <br/>
+                    <span id='example'>
+                    <br/> For example:
+                    <br/> 1 month equals 1 / 12 of circle's circumference. 
+                    </span>
+                    <br/>
+                    <br/> <span id='click'> Click on Radial Graph </span>
+                    <p>
+			    </div>                
+               
+			      <!--all year data -->
+			      
+			      
+   <!-- data -->
+   
+          <div class='year'>
+        	<h1> Year 1 </h1>
+        	<div class="development">
+           		<h2> Section 1 of Cicrle </h2>
+                <h3><span class='startDate'>1/January/05</span> to <span class='endDate'>1/Apr/05</span></h3>
+            	<p> Above date range converted to <br/> portion of circle circumference</p>
+                <a href='http://www.turnoffthe.tv'>link</a>                
+            </div>
+        	<div class="teaching">
+           		<h2> Section 2 of Cicrle </h2>
+                <h3><span class='startDate'>1/Apr/05</span> to <span class='endDate'>13/May/05</span></h3>   
+            	<p> Above date range converted to <br/> portion of circle circumference</p>
+                <a href='http://www.turnoffthe.tv/AndreasDilaveris'>link</a>
+            </div> 
+        	<div class="development">
+           		<h2> Section 3 of Cicrle </h2>
+                <h3><span class='startDate'>13/May/05</span> to <span class='endDate'>10/Jun/05</span></h3>   
+            	<p> Above date range converted to <br/> portion of circle circumference</p>
+                <a href='http://www.turnoffthe.tv/Illustrations'>link</a>
+            </div> 
+        	<div class="design">
+           		<h2> Section 4 of Cicrle </h2>
+                <h3><span class='startDate'>10/Jun/05</span> to <span class='endDate'>1/JULY/05</span></h3>              
+            	<p> Above date range converted to <br/> portion of circle circumference</p>
+                <a href='http://www.turnoffthe.tv/Identities'>link</a>           
+            </div>
+        	<div class="development">
+           		<h2> Section 5 of Cicrle </h2>
+                <h3><span class='startDate'>1/july/05</span> to <span class='endDate'>30/july/05</span></h3>   
+            	<p> Above date range converted to <br/> portion of circle circumference</p>
+                 <a href='http://www.turnoffthe.tv/mosaics/'>link</a>
+            </div>  
+        	<div class="design">
+           		<h2> Section 6 of Cicrle </h2>
+                <h3><span class='startDate'>30/july/05</span> to <span class='endDate'>10/august/05</span></h3>   
+            	<p> Above date range converted to <br/> portion of circle circumference</p>
+                <a href=#>link</a>
+            </div> 
+        	<div class="development">
+           		<h2> Section 7 of Cicrle </h2>
+                <h3><span class='startDate'>10/august/05</span> to <span class='endDate'>1/september/05</span></h3>              
+            	<p> Above date range converted to <br/> portion of circle circumference</p>
+               	<a href='http://www.turnoffthe.tv'>link</a>            
+            </div>
+        	<div class="motiongraphics">
+           		<h2> Section 8 of Cicrle </h2>
+                <h3><span class='startDate'>1/september/05</span> to <span class='endDate'>14/september/05</span></h3>   
+            	<p> Above date range converted to <br/> portion of circle circumference</p>
+               <a href='http://www.turnoffthe.tv/Identities'>link</a>
+            </div>
+        	<div class="development">
+           		<h2> Section 9 of Cicrle </h2>
+                <h3><span class='startDate'>14/september/05</span> to <span class='endDate'>10/oct/05</span></h3>   
+            	<p> Above date range converted to <br/> portion of circle circumference</p>
+                <a href=#>link</a>
+            </div> 
+        	<div class="motiongraphics">
+           		<h2> Section 10 of Cicrle </h2>
+                <h3><span class='startDate'>10/oct/05</span> to <span class='endDate'>1/november/05</span></h3>              
+            	<p> Above date range converted to <br/> portion of circle circumference</p>
+                <a href='http://www.turnoffthe.tv'>link</a>                
+            </div>
+        	<div class="teaching">
+           		<h2> Section 11 of Cicrle </h2>
+                <h3><span class='startDate'>1/november/05</span> to <span class='endDate'>1/january/07</span></h3>   
+            	<p> Above date range converted to <br/> portion of circle circumference</p>
+                <a href='http://www.turnoffthe.tv/mosaics/'>link</a>
+            </div>                                                               
+        </div>
+        
+          <div class='year'>
+        	<h1> Year 2 </h1>
+        	<div class="development">
+           		<h2> Section 1 of Cicrle </h2>
+                <h3><span class='startDate'>1/January/06</span> to <span class='endDate'>27/JAN/06</span></h3>
+            	<p> Above date range converted to <br/> portion of circle circumference</p>
+                 <a href='http://www.turnoffthe.tv/AndreasDilaveris'>link</a>             
+            </div>
+        	<div class="motiongraphics">
+           		<h2> Section 2 of Cicrle </h2>
+                <h3><span class='startDate'>27/JAN/06</span> to <span class='endDate'>16/february/06</span></h3>   
+            	<p> Above date range converted to <br/> portion of circle circumference</p>
+                <a href='http://www.turnoffthe.tv/mosaics/'>link</a>
+            </div> 
+        	<div class="development">
+           		<h2> Section 3 of Cicrle </h2>
+                <h3><span class='startDate'>16/february/06</span> to <span class='endDate'>1/may/06</span></h3>   
+            	<p> Above date range converted to <br/> portion of circle circumference</p>
+                <a href='http://www.turnoffthe.tv/Identities'>link</a>
+            </div> 
+        	<div class="teaching">
+           		<h2> Section 4 of Cicrle </h2>
+                <h3><span class='startDate'>1/may/06</span> to <span class='endDate'>15/may/06</span></h3>              
+            	<p> Above date range converted to <br/> portion of circle circumference</p>
+                <a href='http://www.turnoffthe.tv'>link</a>               
+            </div>
+        	<div class="design">
+           		<h2> Section 5 of Cicrle </h2>
+                <h3><span class='startDate'>15/may/06</span> to <span class='endDate'>25/june/06</span></h3>   
+            	<p> Above date range converted to <br/> portion of circle circumference</p>
+                <a href='http://www.turnoffthe.tv/mosaics/'>link</a>
+            </div>
+        	<div class="development">
+           		<h2>Section 6 of Cicrle </h2>
+                <h3><span class='startDate'>25/june/06</span> to <span class='endDate'>25/july/06</span></h3>   
+            	<p> Above date range converted to <br/> portion of circle circumference</p>
+                <a href='http://www.turnoffthe.tv/AndreasDilaveris'>link</a>
+            </div> 
+        	<div class="teaching">
+           		<h2> Section 7 of Cicrle </h2>
+                <h3><span class='startDate'>25/july/06</span> to <span class='endDate'>1/august/06</span></h3>              
+            	<p> Above date range converted to <br/> portion of circle circumference</p>
+                <a href='http://www.turnoffthe.tv'>link</a>                
+            </div>
+        	<div class="motiongraphics">
+           		<h2> Section 8 of Cicrle </h2>
+                <h3><span class='startDate'>1/august/06</span> to <span class='endDate'>1/september/06</span></h3>   
+            	<p> Above date range converted to <br/> portion of circle circumference</p>
+                <a href='http://www.turnoffthe.tv/Illustrations'>link</a>
+            </div>
+        	<div class="development">
+           		<h2> Section 9 of Cicrle </h2>
+                <h3><span class='startDate'>1/september/06</span> to <span class='endDate'>14/september/06</span></h3>   
+            	<p> Above date range converted to <br/> portion of circle circumference</p>
+               <a href='http://www.turnoffthe.tv'>link</a>
+            </div> 
+        	<div class="motiongraphics">
+           		<h2> Section 10 of Cicrle </h2>
+                <h3><span class='startDate'>14/september/06</span> to <span class='endDate'>8/october/06</span></h3>              
+            	<p> Above date range converted to <br/> portion of circle circumference</p>
+                <a href='http://www.turnoffthe.tv/Illustrations'>link</a>               
+            </div>
+        	<div class="teaching">
+           		<h2> Section 11 of Cicrle</h2>
+                <h3><span class='startDate'>8/october/06</span> to <span class='endDate'>1/january/07</span></h3>   
+            	<p> Above date range converted to <br/> portion of circle circumference</p>
+                <a href='http://www.turnoffthe.tv/Identities'>link</a>
+            </div>                                                               
+        </div>        
+        
+        <div class='year'>
+        	<h1> Year 3 </h1>
+        	<div class="development">
+           		<h2> Section 1 of Cicrle </h2>
+                <h3><span class='startDate'>1/January/07</span> to <span class='endDate'>16/February/07</span></h3>
+            	<p> Above date range converted to <br/> portion of circle circumference</p>
+                <a href='http://www.turnoffthe.tv/Illustrations'>link</a>              
+            </div>
+        	<div class="motiongraphics">
+           		<h2> Section 2 of Cicrle </h2>
+                <h3><span class='startDate'>16/February/07</span> to <span class='endDate'>13/March/07</span></h3>   
+            	<p> Above date range converted to <br/> portion of circle circumference</p>
+                <a href='http://www.turnoffthe.tv'>link</a>
+            </div> 
+        	<div class="teaching">
+           		<h2> Section 3 of Cicrle </h2>
+                <h3><span class='startDate'>13/March/07</span> to <span class='endDate'>20/March/07</span></h3>   
+            	<p> Above date range converted to <br/> portion of circle circumference</p>
+                <a href='http://www.turnoffthe.tv/Identities'>link</a>
+            </div> 
+        	<div class="design">
+           		<h2> Section 4 of Cicrle </h2>
+                <h3><span class='startDate'>20/March/07</span> to <span class='endDate'>5/April/07</span></h3>
+            	<p> Above date range converted to <br/> portion of circle circumference</p>
+                <a href='http://www.turnoffthe.tv/AndreasDilaveris'>link</a>               
+            </div>
+        	<div class="development">
+           		<h2> Section 5 of Cicrle </h2>
+                <h3><span class='startDate'>5/April/07</span> to <span class='endDate'>1/July/07</span></h3>   
+            	<p> Above date range converted to <br/> portion of circle circumference</p>
+                <a href=#>link</a>
+            </div>              
+        	<div class="motiongraphics">
+           		<h2> Section 6 of Cicrle </h2>
+                <h3><span class='startDate'>1/July/07</span> to <span class='endDate'>10/August/07</span></h3>
+            	<p> Above date range converted to <br/> portion of circle circumference</p>
+                <a href='http://www.turnoffthe.tv/Illustrations'>link</a>            
+            </div>
+        	<div class="design">
+           		<h2> Section 7 of Cicrle </h2>
+                <h3><span class='startDate'>10/August/07</span> to <span class='endDate'>17/August/07</span></h3>
+            	<p> Above date range converted to <br/> portion of circle circumference</p>
+                <a href='http://www.turnoffthe.tv/Identities'>link</a>                
+            </div>
+        	<div class="motiongraphics">
+           		<h2> Section 8 of Cicrle </h2>
+                <h3><span class='startDate'>17/August/07</span> to <span class='endDate'>8/October/07</span></h3>
+            	<p> Above date range converted to <br/> portion of circle circumference</p>
+                <a href='http://www.turnoffthe.tv/mosaics/'>link</a>                
+            </div>                        
+        	<div class="development">
+           		<h2> Section 9 of Cicrle </h2>
+                <h3><span class='startDate'>8/October/07</span> to <span class='endDate'>1/Jan/08</span></h3>   
+            	<p> Above date range converted to <br/> portion of circle circumference</p>
+                <a href='http://www.turnoffthe.tv'>link</a>
+            </div>                                    
+        </div>
+        
+        
+        
+         <div class='year'>
+        	<h1> Year 4 </h1>
+        	<div class="design">
+           		<h2> Section 1 of Cicrle </h2>
+                <h3><span class='startDate'>1/January/08</span> to <span class='endDate'>1/May/08</span></h3>
+            	<p> Above date range converted to <br/> portion of circle circumference</p>
+                <a href='http://www.turnoffthe.tv/AndreasDilaveris'>link</a>                
+            </div>
+        	<div class="development">
+           		<h2> Section 2 of Cicrle </h2>
+                <h3><span class='startDate'>1/May/08</span> to <span class='endDate'>1/June/08</span></h3>   
+            	<p> Above date range converted to <br/> portion of circle circumference</p>
+                <a href='http://www.turnoffthe.tv'>link</a>
+            </div> 
+        	<div class="motiongraphics">
+           		<h2> Section 3 of Cicrle </h2>
+                <h3><span class='startDate'>1/June/08</span> to <span class='endDate'>16/August/08</span></h3>   
+            	<p> Above date range converted to <br/> portion of circle circumference</p>
+                <a href='http://www.turnoffthe.tv/Illustrations'>link</a>
+            </div> 
+        	<div class="development">
+           		<h2> Section 4 of Cicrle </h2>
+                <h3><span class='startDate'>16/August/08</span> to <span class='endDate'>2/September/08</span></h3>              
+            	<p> Above date range converted to <br/> portion of circle circumference</p>
+                <a href='http://www.turnoffthe.tv/AndreasDilaveris'>link</a>                
+            </div>            
+        	<div class="motiongraphics">
+           		<h2> Section 5 of Cicrle </h2>
+                <h3><span class='startDate'>2/September/08</span> to <span class='endDate'>24/September/08</span></h3>              
+            	<p> Above date range converted to <br/> portion of circle circumference</p>
+                <a href='http://www.turnoffthe.tv/Illustrations'>link</a>                
+            </div>
+        	<div class="design">
+           		<h2> Section 6 of Cicrle </h2>
+                <h3><span class='startDate'>24/September/08</span> to <span class='endDate'>28/October/08</span></h3>   
+            	<p> Above date range converted to <br/> portion of circle circumference</p>
+                <a href='http://www.turnoffthe.tv/mosaics/'>link</a>
+            </div>                                    
+        	<div class="motiongraphics">
+           		<h2> Section 7 of Cicrle </h2>
+                <h3><span class='startDate'>28/October/08</span> to <span class='endDate'>10/December/08</span></h3>   
+            	<p> Above date range converted to <br/> portion of circle circumference</p>
+                <a href='http://www.turnoffthe.tv'>link</a>
+            </div>  
+        	<div class="design">
+           		<h2> Section 8 of Cicrle </h2>
+                <h3><span class='startDate'>10/December/08</span> to <span class='endDate'>1/january/09</span></h3>   
+            	<p> Above date range converted to <br/> portion of circle circumference</p>
+                <a href='http://www.turnoffthe.tv/AndreasDilaveris'>link</a>
+            </div>              
+        </div> 
+        
+        
+         <div class='year'>
+        	<h1> Year 5 </h1>
+        	<div class="design">
+           		<h2> Section 1 of Cicrle </h2>
+                <h3><span class='startDate'>1/January/08</span> to <span class='endDate'>1/May/08</span></h3>
+            	<p> Above date range converted to <br/> portion of circle circumference</p>
+                <a href='http://www.turnoffthe.tv'>link</a>                
+            </div>
+        	<div class="development">
+           		<h2> Section 2 of Cicrle </h2>
+                <h3><span class='startDate'>1/May/08</span> to <span class='endDate'>13/June/08</span></h3>   
+            	<p> Above date range converted to <br/> portion of circle circumference</p>
+                <a href='http://www.turnoffthe.tv/Illustrations'>link</a>
+            </div> 
+        	<div class="motiongraphics">
+           		<h2> Section 3 of Cicrle </h2>
+                <h3><span class='startDate'>13/June/08</span> to <span class='endDate'>16/August/08</span></h3>   
+            	<p> Above date range converted to <br/> portion of circle circumference</p>
+                <a href='http://www.turnoffthe.tv'>link</a>
+            </div> 
+        	<div class="development">
+           		<h2> Section 4 of Cicrle </h2>
+                <h3><span class='startDate'>16/August/08</span> to <span class='endDate'>2/September/08</span></h3>              
+            	<p> Above date range converted to <br/> portion of circle circumference</p>
+                <a href='http://www.turnoffthe.tv/AndreasDilaveris'>link</a>              
+            </div>            
+        	<div class="motiongraphics">
+           		<h2> Section 5 of Cicrle </h2>
+                <h3><span class='startDate'>2/September/08</span> to <span class='endDate'>24/September/08</span></h3>              
+            	<p> Above date range converted to <br/> portion of circle circumference</p>
+                <a href='http://www.turnoffthe.tv'>link</a>              
+            </div>
+        	<div class="design">
+           		<h2> Section 6 of Cicrle </h2>
+                <h3><span class='startDate'>24/September/08</span> to <span class='endDate'>28/October/08</span></h3>   
+            	<p> Above date range converted to <br/> portion of circle circumference</p>
+                <a href='http://www.turnoffthe.tv/Illustrations'>link</a>
+            </div>                                    
+        	<div class="motiongraphics">
+           		<h2> Section 7 of Cicrle </h2>
+                <h3><span class='startDate'>28/October/08</span> to <span class='endDate'>10/December/08</span></h3>   
+            	<p> Above date range converted to <br/> portion of circle circumference</p>
+                <a href='http://www.turnoffthe.tv/AndreasDilaveris'>link</a>
+            </div>  
+        	<div class="design">
+           		<h2> Section 8 of Cicrle </h2>
+                <h3><span class='startDate'>10/December/08</span> to <span class='endDate'>1/january/09</span></h3>   
+            	<p> Above date range converted to <br/> portion of circle circumference</p>
+                <a href='http://www.turnoffthe.tv'>link</a>
+            </div>              
+        </div> 
+        
+         <div class='year'>
+        	<h1> Year 6 </h1>
+        	<div class="development">
+           		<h2> Section 1 of Cicrle </h2>
+                <h3><span class='startDate'>1/January/09</span> to <span class='endDate'>20/March/09</span></h3>
+            	<p> Above date range converted to <br/> portion of circle circumference</p>
+                <a href='http://www.turnoffthe.tv'>link</a>               
+            </div>
+        	<div class="design">
+           		<h2> Section 2 of Cicrle </h2>
+                <h3><span class='startDate'>20/March/09</span> to <span class='endDate'>13/June/09</span></h3>   
+            	<p> Above date range converted to <br/> portion of circle circumference</p>
+                <a href='http://www.turnoffthe.tv/Identities'>link</a>
+            </div> 
+        	<div class="motiongraphics">
+           		<h2> Section 3 of Cicrle </h2>
+                <h3><span class='startDate'>13/June/09</span> to <span class='endDate'>28/August/09</span></h3>   
+            	<p> Above date range converted to <br/> portion of circle circumference</p>
+                <a href='http://www.turnoffthe.tv'>link</a>
+            </div> 
+        	<div class="motiongraphics">
+           		<h2> Section 4 of Cicrle </h2>
+                <h3><span class='startDate'>28/August/09</span> to <span class='endDate'>15/November/09</span></h3>              
+            	<p> Above date range converted to <br/> portion of circle circumference</p>
+                <a href='http://www.turnoffthe.tv/AndreasDilaveris'>link</a>                
+            </div>
+        	<div class="teaching">
+           		<h2> Section 5 of Cicrle </h2>
+                <h3><span class='startDate'>15/November/09</span> to <span class='endDate'>1/january/09</span></h3>   
+            	<p> Above date range converted to <br/> portion of circle circumference</p>
+                <a href='http://www.turnoffthe.tv/Identities'>link</a>
+            </div>                                    
+        </div> 
+			          
+		    </div>	
+		    	 		    	    
+	    </div>	    
+	          
+	</body>
+</html>

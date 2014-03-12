@@ -1,0 +1,39 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1038\cocoasubrtf360
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww18120\viewh14900\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\f0\b\fs24 \cf0 Description
+\b0 \
+\
+This is an ongoing attempt to sharpen my understanding of javascript code organisation.  I have chosen to use the Mootools framework because of the way it abstracts the language's prototypical nature, offering a Classical / OOP way of programming.  This has allowed me to explore both Javascript and it's relation to the DOM, as well as Design Pattern implementation.\
+\
+Currently the patterns being explored are: \
+\
+1. 
+\b The Composite Pattern
+\b0  - To organise graphical content and mass apply rendering activities.\
+2. 
+\b The Builder Pattern / Factory Pattern
+\b0  - To centralise build procedures of composite objects and hide these activities from other layers.  This is mainly to allow for framework expansion without breaking older implementations.\
+3. 
+\b The Decorator Pattern
+\b0  - In conjunction with the Mootools Elements class, the pattern is used to enhance html elements and give them more functionality.\
+\
+Ultimately, apart from a deeper understanding of design patterns I hope to end up with some robust boiler plate code that could be used to rapidly build projects.  Once this is formalised more interesting implementations can be layered on top.\
+\
+Currently I am focusing on different ways to collect semantic information from an html document.  This information is collected programatically, extended using a group of data parsing / handling classes and finally displayed as data in a graphical format on a canvas element. Specifically dates are converted to a portion of the circumference of a circle.\
+\
+To control the canvas I am using a set of classes based on the Composite Pattern to collect and render content.  The result is a lightweight scene graph. (It is loosely based on the core architecture used in the GreenSock framework.  In an earlier build I implemented some of the key functionalities built in to the GreenSock framework so as to be able to easily animate content.  When GreenSock.js was introduced these functionalities where removed and all animation was delegated to the GS framework.  This has helped further modularise the code.\
+\
+\
+
+\b Future Development.
+\b0 \
+\
+As the individual elements rendered to the canvas do not exist as separate entities,  I need to work on an event registration system so that mouse events on the canvas layer can be virtually picked up by these individual elements.\
+\
+This is a project I am currently exploring on my spare time.  I hope to develop it significantly.  The provided code is incomplete.  Please ignore files such as .css as it was quickly thrown together.  Also the file 
+\b dev.js
+\b0   (the client class) is still disorganised, in particular code related to mouse events.}
